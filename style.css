@@ -417,6 +417,160 @@ a {
 }
 
 
+
+/* =========================================
+   ABOUT
+   ========================================= */
+
+.about-section {
+    min-height: 100vh;
+}
+
+
+/* Section label */
+
+.section-heading {
+    margin-bottom: 4rem;
+}
+
+
+/* Two-column layout */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8rem;
+
+    align-items: start;
+}
+
+
+/* ---------- LEFT SIDE ---------- */
+
+.about-intro h2 {
+    max-width: 650px;
+
+    font-size: clamp(3.5rem, 6vw, 6.5rem);
+
+    line-height: 0.98;
+
+    font-weight: 500;
+
+    letter-spacing: -0.055em;
+}
+
+.about-intro h2 span {
+    color: var(--teal);
+}
+
+
+/* ---------- RIGHT SIDE ---------- */
+
+.about-content {
+    padding-top: 0.8rem;
+}
+
+.about-lead {
+    font-size: 1.6rem !important;
+
+    line-height: 1.45 !important;
+
+    color: var(--text) !important;
+
+    margin-bottom: 2rem !important;
+}
+
+.about-content > p {
+    max-width: 650px;
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+
+    color: var(--text-muted);
+
+    margin-bottom: 1.7rem;
+}
+
+
+/* ---------- FACTS ---------- */
+
+.about-facts {
+    margin-top: 3.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+}
+
+.fact {
+    min-height: 110px;
+
+    padding: 1.4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.fact:hover {
+    background: var(--surface-light);
+}
+
+.fact-label {
+    color: var(--magenta);
+
+    font-size: 0.65rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.2em;
+}
+
+.fact-value {
+    color: var(--text);
+
+    font-size: 0.95rem;
+}
+
+
+/* ---------- MOBILE ABOUT ---------- */
+
+@media screen and (max-width: 900px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .about-intro h2 {
+        max-width: 700px;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .about-facts {
+        grid-template-columns: 1fr;
+    }
+
+    .about-lead {
+        font-size: 1.3rem !important;
+    }
+}
+
+
 /* =========================================
    RESPONSIVE
    ========================================= */
