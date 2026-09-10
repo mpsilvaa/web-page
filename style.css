@@ -318,19 +318,13 @@ section {
    ========================================= */
 
 .hero-image {
-    height: 58vh;
+    width: min(100%, 460px);
+    aspect-ratio: 4 / 5;
 
-    min-height: 420px;
-    max-height: 560px;
-
-    padding: 1.4rem;
+    justify-self: end;
 
     position: relative;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
 
     border: 1px solid var(--border);
 
