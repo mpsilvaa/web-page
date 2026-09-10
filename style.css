@@ -422,150 +422,160 @@ a {
    ========================================= */
 
 .about-section {
-    min-height: 100vh;
+    padding: 120px 8%;
+    border-top: 1px solid var(--border);
+}
+
+.about-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.about-label span {
+    color: var(--magenta);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+}
+
+.about-label p {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    margin: 0;
+}
+
+.about-label::after {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background: var(--border);
 }
 
 
-/* Section label */
-
-.section-heading {
-    margin-bottom: 4rem;
-}
-
-
-/* Two-column layout */
+/* Main layout */
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    gap: 8rem;
-
+    grid-template-columns: 360px minmax(0, 650px);
+    gap: 5rem;
     align-items: start;
+
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 
-/* ---------- LEFT SIDE ---------- */
+/* Graduation photo */
 
-.about-intro h2 {
-    max-width: 650px;
-
-    font-size: clamp(3.5rem, 6vw, 6.5rem);
-
-    line-height: 0.98;
-
-    font-weight: 500;
-
-    letter-spacing: -0.055em;
+.about-image {
+    width: 360px;
+    position: relative;
 }
 
-.about-intro h2 span {
-    color: var(--teal);
+.about-image img {
+    width: 360px;
+    height: 460px;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    border: 1px solid var(--border);
 }
 
+.about-image::before {
+    content: "";
 
-/* ---------- RIGHT SIDE ---------- */
+    position: absolute;
+    top: -10px;
+    left: -10px;
 
-.about-content {
-    padding-top: 0.8rem;
+    width: 60px;
+    height: 60px;
+
+    border-top: 2px solid var(--teal);
+    border-left: 2px solid var(--teal);
 }
 
-.about-lead {
-    font-size: 1.6rem !important;
+.about-image-caption {
+    margin-top: 0.8rem;
 
-    line-height: 1.45 !important;
-
-    color: var(--text) !important;
-
-    margin-bottom: 2rem !important;
-}
-
-.about-content > p {
-    max-width: 650px;
-
-    font-size: 1rem;
-
-    line-height: 1.9;
+    display: flex;
+    justify-content: space-between;
 
     color: var(--text-muted);
 
-    margin-bottom: 1.7rem;
-}
-
-
-/* ---------- FACTS ---------- */
-
-.about-facts {
-    margin-top: 3.5rem;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    border-top: 1px solid var(--border);
-    border-left: 1px solid var(--border);
-}
-
-.fact {
-    min-height: 110px;
-
-    padding: 1.4rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-
-    transition:
-        background 0.3s ease,
-        transform 0.3s ease;
-}
-
-.fact:hover {
-    background: var(--surface-light);
-}
-
-.fact-label {
-    color: var(--magenta);
-
     font-size: 0.65rem;
+    letter-spacing: 0.18em;
+}
 
+
+/* Biography */
+
+.about-text {
+    max-width: 650px;
+}
+
+.about-kicker {
+    margin-bottom: 1rem;
+
+    color: var(--teal);
+
+    font-size: 0.68rem;
     font-weight: 600;
 
-    letter-spacing: 0.2em;
+    letter-spacing: 0.22em;
 }
 
-.fact-value {
+.about-text h2 {
+    margin-bottom: 1.8rem;
+
+    font-size: 3.3rem;
+    font-weight: 500;
+
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.about-lead {
+    margin-bottom: 1.5rem;
+
     color: var(--text);
 
-    font-size: 0.95rem;
+    font-size: 1.2rem;
+    line-height: 1.65;
+}
+
+.about-text > p:not(.about-kicker):not(.about-lead) {
+    margin-bottom: 1.35rem;
+
+    color: var(--text-muted);
+
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
 
-/* ---------- MOBILE ABOUT ---------- */
+/* Mobile */
 
 @media screen and (max-width: 900px) {
 
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 4rem;
+        gap: 3rem;
     }
 
-    .about-intro h2 {
-        max-width: 700px;
-    }
-}
-
-
-@media screen and (max-width: 650px) {
-
-    .about-facts {
-        grid-template-columns: 1fr;
+    .about-image {
+        width: 100%;
+        max-width: 420px;
     }
 
-    .about-lead {
-        font-size: 1.3rem !important;
+    .about-image img {
+        width: 100%;
+        height: auto;
     }
 }
 
