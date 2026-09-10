@@ -298,15 +298,39 @@ a {
         var(--surface);
 }
 
+.hero-image {
+    height: 58vh;
+    min-height: 420px;
+    max-height: 560px;
+
+    position: relative;
+
+    border: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 153, 117, 0.10),
+            rgba(187, 0, 68, 0.08)
+        ),
+        var(--surface);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
 .hero-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+
+    object-fit: contain;
     object-position: center;
 
     display: block;
 
-    filter: saturate(0.9) contrast(1.03);
+    filter: saturate(0.95) contrast(1.02);
 }
 /* decorative corner */
 
