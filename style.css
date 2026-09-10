@@ -1,5 +1,6 @@
 /* =========================================
-   MARIA PAULA SILVA — PERSONAL WEBSITE
+   MARIA PAULA SILVA-AREVALO
+   PERSONAL WEBSITE
    ========================================= */
 
 
@@ -55,9 +56,6 @@ img {
     max-width: 100%;
 }
 
-
-/* Prevent fixed navbar from covering sections */
-
 section {
     scroll-margin-top: 80px;
 }
@@ -82,7 +80,7 @@ section {
     align-items: center;
     justify-content: space-between;
 
-    background: rgba(8, 13, 13, 0.90);
+    background: rgba(8, 13, 13, 0.92);
 
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
@@ -92,8 +90,6 @@ section {
     z-index: 1000;
 }
 
-
-/* Logo */
 
 .logo {
     color: var(--teal);
@@ -105,35 +101,33 @@ section {
 }
 
 
-/* Navigation links */
-
 .nav-links {
     display: flex;
     align-items: center;
 
-    gap: 2rem;
+    gap: 1.7rem;
 }
+
 
 .nav-links a {
     position: relative;
 
     color: var(--text-muted);
 
-    font-size: 0.75rem;
+    font-size: 0.72rem;
 
     text-transform: uppercase;
 
-    letter-spacing: 0.15em;
+    letter-spacing: 0.13em;
 
     transition: color 0.3s ease;
 }
+
 
 .nav-links a:hover {
     color: var(--text);
 }
 
-
-/* Underline animation */
 
 .nav-links a::after {
     content: "";
@@ -151,6 +145,7 @@ section {
     transition: width 0.3s ease;
 }
 
+
 .nav-links a:hover::after {
     width: 100%;
 }
@@ -166,16 +161,16 @@ section {
     padding: 140px 8% 80px;
 
     display: grid;
+
     grid-template-columns: 1.15fr 0.85fr;
 
     align-items: center;
+
     gap: 4.5rem;
 
     position: relative;
 }
 
-
-/* Subtle circle */
 
 .hero::before {
     content: "";
@@ -194,15 +189,12 @@ section {
 }
 
 
-/* Hero text */
-
 .hero-text {
     position: relative;
+
     z-index: 2;
 }
 
-
-/* Physics × Astronomy */
 
 .eyebrow {
     margin-bottom: 1.8rem;
@@ -216,8 +208,6 @@ section {
 }
 
 
-/* Name */
-
 .hero h1 {
     margin-bottom: 2.5rem;
 
@@ -230,14 +220,13 @@ section {
     letter-spacing: -0.055em;
 }
 
+
 .hero h1 span {
     display: block;
 
     color: var(--magenta);
 }
 
-
-/* Description */
 
 .hero-description {
     max-width: 580px;
@@ -249,8 +238,6 @@ section {
     font-size: 1.15rem;
 }
 
-
-/* Research button */
 
 .hero-button {
     display: inline-flex;
@@ -277,11 +264,13 @@ section {
         transform 0.3s ease;
 }
 
+
 .hero-button span {
     color: var(--teal);
 
     font-size: 1.2rem;
 }
+
 
 .hero-button:hover {
     background: var(--teal);
@@ -291,12 +280,11 @@ section {
     transform: translateY(-3px);
 }
 
+
 .hero-button:hover span {
     color: white;
 }
 
-
-/* Affiliation */
 
 .affiliation {
     margin-top: 3.5rem;
@@ -315,6 +303,21 @@ section {
    HERO IMAGE
    ========================================= */
 
+.hero-image {
+    width: min(100%, 520px);
+
+    aspect-ratio: 4 / 5;
+
+    justify-self: end;
+
+    position: relative;
+
+    border: 1px solid var(--border);
+
+    background: var(--surface);
+}
+
+
 .hero-image img {
     width: 100%;
     height: 100%;
@@ -322,6 +325,7 @@ section {
     display: block;
 
     object-fit: cover;
+
     object-position: center 35%;
 
     filter:
@@ -329,22 +333,6 @@ section {
         contrast(1.02);
 }
 
-.hero-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: contain;
-    object-position: center;
-
-    filter:
-        saturate(0.95)
-        contrast(1.02);
-}
-
-
-/* Teal corner */
 
 .hero-image::before {
     content: "";
@@ -359,10 +347,10 @@ section {
 
     border-top: 2px solid var(--teal);
     border-right: 2px solid var(--teal);
+
+    z-index: 2;
 }
 
-
-/* Magenta corner */
 
 .hero-image::after {
     content: "";
@@ -377,6 +365,8 @@ section {
 
     border-bottom: 2px solid var(--magenta);
     border-left: 2px solid var(--magenta);
+
+    z-index: 2;
 }
 
 
@@ -394,6 +384,7 @@ section {
     border-top: 1px solid var(--border);
 }
 
+
 .section-number {
     margin-bottom: 1rem;
 
@@ -404,7 +395,10 @@ section {
     letter-spacing: 0.2em;
 }
 
+
 .page-section h2 {
+    color: var(--teal);
+
     font-size: clamp(3rem, 6vw, 6rem);
 
     font-weight: 500;
@@ -426,8 +420,6 @@ section {
 }
 
 
-/* Small ABOUT label */
-
 .about-label {
     max-width: 1200px;
 
@@ -440,6 +432,7 @@ section {
     gap: 0.8rem;
 }
 
+
 .about-label span {
     color: var(--magenta);
 
@@ -447,6 +440,7 @@ section {
 
     letter-spacing: 0.15em;
 }
+
 
 .about-label p {
     margin: 0;
@@ -458,6 +452,7 @@ section {
     letter-spacing: 0.2em;
 }
 
+
 .about-label::after {
     content: "";
 
@@ -468,7 +463,7 @@ section {
 }
 
 
-/* Main photo + text layout */
+/* Photo + biography */
 
 .about-grid {
     max-width: 1200px;
@@ -478,16 +473,14 @@ section {
     display: grid;
 
     grid-template-columns:
-        minmax(260px, 360px)
+        minmax(270px, 360px)
         minmax(0, 1fr);
 
-    gap: clamp(2.5rem, 5vw, 5.5rem);
+    gap: clamp(3rem, 6vw, 6rem);
 
     align-items: center;
 }
 
-
-/* Graduation photo */
 
 .about-image {
     width: 100%;
@@ -495,22 +488,21 @@ section {
     position: relative;
 }
 
+
 .about-image img {
     width: 100%;
-    height: auto;
 
     aspect-ratio: 4 / 5;
 
     display: block;
 
     object-fit: cover;
+
     object-position: center;
 
     border: 1px solid var(--border);
 }
 
-
-/* Teal decorative corner */
 
 .about-image::before {
     content: "";
@@ -528,61 +520,30 @@ section {
 }
 
 
-/* Colombia → Delaware */
-
-.about-image-caption {
-    margin-top: 0.9rem;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: space-between;
-
-    color: var(--text-muted);
-
-    font-size: 0.65rem;
-
-    letter-spacing: 0.16em;
-}
-
-
-/* Biography */
-
 .about-text {
     width: 100%;
 
-    max-width: 680px;
-
-    min-width: 0;
+    max-width: 700px;
 }
 
-.about-kicker {
-    margin-bottom: 1rem;
+
+.about-text h2 {
+    margin-bottom: 2rem;
 
     color: var(--teal);
 
-    font-size: 0.68rem;
-    font-weight: 600;
-
-    letter-spacing: 0.22em;
-}
-
-.about-text h2 {
-    margin-bottom: 1.7rem;
-
-    font-size: clamp(2.5rem, 4vw, 3.6rem);
+    font-size: clamp(2.7rem, 4vw, 3.8rem);
 
     font-weight: 500;
 
     line-height: 1;
 
     letter-spacing: -0.035em;
-
-    color: var(--teal);
 }
 
+
 .about-lead {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
 
     color: var(--text);
 
@@ -591,8 +552,9 @@ section {
     line-height: 1.65;
 }
 
-.about-text > p:not(.about-kicker):not(.about-lead) {
-    margin-bottom: 1.25rem;
+
+.about-text > p:not(.about-lead) {
+    margin-bottom: 1.45rem;
 
     color: var(--text-muted);
 
@@ -603,28 +565,23 @@ section {
 
 
 /* =========================================
-   TEXT SELECTION
-   ========================================= */
-
-::selection {
-    background: var(--teal);
-
-    color: white;
-}
-
-/* =========================================
    RESEARCH
    ========================================= */
 
 .research-section {
-    padding: 120px 7%;
+    padding: 110px 6% 120px;
+
     border-top: 1px solid var(--border);
 }
 
+
 .research-heading {
+    width: 100%;
     max-width: 1500px;
+
     margin: 0 auto 3.5rem;
 }
+
 
 .research-heading .section-number {
     margin-bottom: 1rem;
@@ -632,8 +589,10 @@ section {
     color: var(--magenta);
 
     font-size: 0.7rem;
+
     letter-spacing: 0.2em;
 }
+
 
 .research-heading h2 {
     color: var(--teal);
@@ -641,44 +600,53 @@ section {
     font-size: clamp(3rem, 5vw, 5rem);
 
     font-weight: 500;
+
     line-height: 1;
 
     letter-spacing: -0.04em;
 }
 
 
-/* Main card layout */
+/* Two cards */
 
 .research-grid {
+    width: 100%;
     max-width: 1500px;
 
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: minmax(0, 1.65fr) minmax(300px, 0.75fr);
+
+    grid-template-columns:
+        minmax(0, 1.6fr)
+        minmax(320px, 0.75fr);
 
     gap: 2rem;
+
+    align-items: stretch;
 }
 
 
-/* Both cards */
-
 .research-card {
-    position: relative;
+    min-width: 0;
 
-    padding: 2.2rem;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
 
     border: 1px solid var(--border);
 
     background: rgba(255, 255, 255, 0.015);
 
-    overflow: hidden;
-
     transition:
-        border-color 0.3s ease,
         transform 0.3s ease,
+        border-color 0.3s ease,
         background 0.3s ease;
 }
+
 
 .research-card:hover {
     transform: translateY(-4px);
@@ -687,32 +655,33 @@ section {
 }
 
 
-/* Different identity for each card */
-
 .paper-card:hover {
     border-color: rgba(0, 153, 117, 0.55);
 }
+
 
 .code-card:hover {
     border-color: rgba(187, 0, 68, 0.55);
 }
 
 
-/* Top card labels */
+/* Top line of cards */
 
 .research-card-top {
-    min-height: 32px;
+    min-height: 45px;
 
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
 
-    padding-bottom: 1.3rem;
+    padding-bottom: 1.2rem;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
     border-bottom: 1px solid var(--border);
 }
+
 
 .research-type {
     color: var(--teal);
@@ -720,31 +689,34 @@ section {
     font-size: 0.65rem;
     font-weight: 600;
 
-    letter-spacing: 0.18em;
+    letter-spacing: 0.17em;
 }
+
 
 .code-type {
     color: var(--magenta);
 }
 
+
 .research-status {
-    padding: 0.35rem 0.6rem;
+    padding: 0.4rem 0.65rem;
 
     background: var(--surface-light);
 
     color: var(--text-muted);
 
-    font-size: 0.6rem;
+    font-size: 0.58rem;
 
-    letter-spacing: 0.14em;
+    letter-spacing: 0.13em;
 }
+
 
 .code-symbol {
     color: var(--magenta);
 
     font-family: monospace;
 
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 
@@ -753,15 +725,28 @@ section {
 .research-figure {
     width: 100%;
 
+    min-height: 320px;
+
     margin-bottom: 2rem;
+
+    padding: 1rem;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
 
     background: #ffffff;
 
     overflow: hidden;
 }
 
+
 .research-figure img {
     width: 100%;
+    height: auto;
+
+    max-height: 440px;
 
     display: block;
 
@@ -769,12 +754,15 @@ section {
 }
 
 
-/* Large tau symbol */
+/* Large TAU */
 
 .tau-symbol {
-    min-height: 290px;
+    min-height: 360px;
+
+    margin-bottom: 2rem;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -782,37 +770,41 @@ section {
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(8rem, 13vw, 13rem);
+    font-size: clamp(9rem, 13vw, 14rem);
 
     font-style: italic;
 
     line-height: 1;
 
-    opacity: 0.9;
-
     border-bottom: 1px solid var(--border);
 }
 
 
-/* Card text */
+/* Card content */
 
 .research-card-content {
-    padding-top: 0.5rem;
+    display: flex;
+
+    flex-direction: column;
+
+    flex-grow: 1;
 }
+
 
 .research-card h3 {
     margin-bottom: 1rem;
 
     color: var(--text);
 
-    font-size: clamp(1.6rem, 2vw, 2.3rem);
+    font-size: clamp(1.6rem, 2vw, 2.25rem);
 
     font-weight: 500;
 
-    line-height: 1.2;
+    line-height: 1.25;
 
     letter-spacing: -0.025em;
 }
+
 
 .research-question {
     margin-bottom: 1.3rem !important;
@@ -820,13 +812,15 @@ section {
     color: var(--text) !important;
 
     font-size: 1.05rem !important;
+
     font-weight: 500;
 
     line-height: 1.6 !important;
 }
 
+
 .research-card-content p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.6rem;
 
     color: var(--text-muted);
 
@@ -845,7 +839,7 @@ section {
 
     gap: 0.8rem;
 
-    margin-top: 0.5rem;
+    margin-top: auto;
 
     color: var(--teal);
 
@@ -861,64 +855,36 @@ section {
         color 0.25s ease;
 }
 
+
 .research-link:hover {
     gap: 1.1rem;
 }
+
 
 .code-link {
     color: var(--magenta);
 }
 
 
-/* Tablet */
+/* =========================================
+   TEXT SELECTION
+   ========================================= */
 
-@media screen and (max-width: 950px) {
+::selection {
+    background: var(--teal);
 
-    .research-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .code-card {
-        max-width: none;
-    }
-
-    .tau-symbol {
-        min-height: 220px;
-    }
+    color: white;
 }
 
 
-/* Mobile */
-
-@media screen and (max-width: 650px) {
-
-    .research-section {
-        padding: 80px 6%;
-    }
-
-    .research-card {
-        padding: 1.4rem;
-    }
-
-    .tau-symbol {
-        min-height: 180px;
-        font-size: 8rem;
-    }
-}
 /* =========================================
    TABLET
    ========================================= */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
 
     .navbar {
-        height: 70px;
-
-        padding: 0 6%;
-    }
-
-    section {
-        scroll-margin-top: 70px;
+        padding: 0 4%;
     }
 
     .nav-links {
@@ -926,7 +892,7 @@ section {
     }
 
     .nav-links a {
-        font-size: 0.65rem;
+        font-size: 0.62rem;
     }
 
 
@@ -941,50 +907,37 @@ section {
     }
 
     .hero-image {
-        width: 100%;
+        width: min(100%, 480px);
 
-        height: auto;
-
-        min-height: 420px;
+        justify-self: center;
     }
 
 
-    /* ABOUT
-       Keep photo and text SIDE BY SIDE on tablets/laptops
-    */
+    /* ABOUT */
 
     .about-section {
         padding: 90px 6%;
     }
 
-    .about-label {
-        margin-bottom: 3rem;
-    }
-
     .about-grid {
         grid-template-columns:
-            minmax(220px, 300px)
+            minmax(230px, 300px)
             minmax(0, 1fr);
 
         gap: 3rem;
-
-        align-items: center;
-    }
-
-    .about-text {
-        max-width: none;
-    }
-
-    .about-text h2 {
-        font-size: 2.8rem;
-    }
-
-    .about-lead {
-        font-size: 1.05rem;
     }
 
 
-    /* GENERAL */
+    /* RESEARCH */
+
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tau-symbol {
+        min-height: 240px;
+    }
+
 
     .page-section {
         padding: 100px 7%;
@@ -996,7 +949,7 @@ section {
    MOBILE
    ========================================= */
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
 
     .navbar {
         height: 65px;
@@ -1028,15 +981,13 @@ section {
     }
 
     .hero-image {
-        min-height: 320px;
+        width: min(100%, 360px);
 
-        padding: 1rem;
+        aspect-ratio: 4 / 5;
     }
 
 
-    /* ABOUT
-       Stack only on actual small screens
-    */
+    /* ABOUT */
 
     .about-section {
         padding: 80px 6%;
@@ -1053,13 +1004,7 @@ section {
     }
 
     .about-image {
-        width: 100%;
-
         max-width: 360px;
-    }
-
-    .about-text {
-        max-width: 100%;
     }
 
     .about-text h2 {
@@ -1070,8 +1015,27 @@ section {
         font-size: 1.05rem;
     }
 
-    .about-text > p:not(.about-kicker):not(.about-lead) {
-        font-size: 0.95rem;
+
+    /* RESEARCH */
+
+    .research-section {
+        padding: 80px 6%;
+    }
+
+    .research-card {
+        padding: 1.4rem;
+    }
+
+    .research-figure {
+        min-height: 0;
+
+        padding: 0.7rem;
+    }
+
+    .tau-symbol {
+        min-height: 180px;
+
+        font-size: 8rem;
     }
 
 
