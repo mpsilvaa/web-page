@@ -577,6 +577,8 @@ section {
     line-height: 1;
 
     letter-spacing: -0.035em;
+
+    color: var(--teal);
 }
 
 .about-lead {
