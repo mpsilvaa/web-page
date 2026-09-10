@@ -1,0 +1,449 @@
+/* =========================================
+   MARIA PAULA SILVA — PERSONAL WEBSITE
+   ========================================= */
+
+
+/* ---------- COLORS ---------- */
+
+:root {
+    --bg: #080d0d;
+    --surface: #0d1515;
+    --surface-light: #121d1c;
+
+    --text: #f3f6f5;
+    --text-muted: #98a6a3;
+
+    --teal: #009975;
+    --magenta: #BB0044;
+
+    --border: rgba(255, 255, 255, 0.12);
+}
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(8, 13, 13, 0.88);
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid var(--border);
+
+    z-index: 1000;
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+
+    color: var(--teal);
+}
+
+
+/* Menu */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    position: relative;
+
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+
+    color: var(--text-muted);
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text);
+}
+
+
+/* little line underneath menu items */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--teal);
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    padding: 150px 8% 80px;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 5rem;
+
+    position: relative;
+}
+
+
+/* subtle line behind hero */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    left: -180px;
+    top: 35%;
+
+    border: 1px solid rgba(0, 153, 117, 0.12);
+
+    border-radius: 50%;
+}
+
+
+/* ---------- HERO TEXT ---------- */
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: var(--teal);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    letter-spacing: 0.3em;
+
+    margin-bottom: 1.8rem;
+}
+
+
+/* Main name */
+
+.hero h1 {
+    font-size: clamp(4rem, 9vw, 8.5rem);
+
+    line-height: 0.88;
+
+    font-weight: 600;
+
+    letter-spacing: -0.055em;
+
+    margin-bottom: 2.5rem;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: var(--magenta);
+}
+
+
+/* description */
+
+.hero-description {
+    max-width: 580px;
+
+    font-size: 1.15rem;
+
+    color: var(--text-muted);
+
+    margin-bottom: 2.5rem;
+}
+
+
+/* ---------- BUTTON ---------- */
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.3rem;
+
+    border: 1px solid var(--teal);
+
+    padding: 1rem 1.4rem;
+
+    color: var(--text);
+
+    text-transform: uppercase;
+
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.hero-button span {
+    color: var(--teal);
+
+    font-size: 1.2rem;
+}
+
+.hero-button:hover {
+    background: var(--teal);
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+.hero-button:hover span {
+    color: #ffffff;
+}
+
+
+/* University */
+
+.affiliation {
+    margin-top: 3.5rem;
+
+    color: var(--text-muted);
+
+    font-size: 0.8rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+
+/* =========================================
+   HERO IMAGE PLACEHOLDER
+   ========================================= */
+
+.hero-image {
+    height: 65vh;
+    min-height: 520px;
+
+    position: relative;
+
+    border: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 153, 117, 0.10),
+            rgba(187, 0, 68, 0.08)
+        ),
+        var(--surface);
+}
+
+
+/* decorative corner */
+
+.hero-image::before {
+    content: "";
+
+    position: absolute;
+
+    top: -12px;
+    right: -12px;
+
+    width: 80px;
+    height: 80px;
+
+    border-top: 2px solid var(--teal);
+    border-right: 2px solid var(--teal);
+}
+
+.hero-image::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -12px;
+    left: -12px;
+
+    width: 80px;
+    height: 80px;
+
+    border-bottom: 2px solid var(--magenta);
+    border-left: 2px solid var(--magenta);
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+   ========================================= */
+
+.page-section {
+    min-height: 70vh;
+
+    padding: 120px 8%;
+
+    border-top: 1px solid var(--border);
+
+    position: relative;
+}
+
+.section-number {
+    color: var(--teal);
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.2em;
+
+    margin-bottom: 1rem;
+}
+
+.page-section h2 {
+    font-size: clamp(3.5rem, 8vw, 7rem);
+
+    font-weight: 500;
+
+    letter-spacing: -0.05em;
+
+    line-height: 1;
+}
+
+
+/* alternating section accent */
+
+.page-section:nth-of-type(even) .section-number {
+    color: var(--magenta);
+}
+
+
+/* =========================================
+   TEXT SELECTION
+   ========================================= */
+
+::selection {
+    background: var(--teal);
+    color: white;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .navbar {
+        height: 70px;
+        padding: 0 6%;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.65rem;
+    }
+
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding: 130px 7% 80px;
+
+        gap: 4rem;
+    }
+
+
+    .hero-image {
+        height: 60vh;
+        min-height: 420px;
+    }
+
+
+    .page-section {
+        padding: 100px 7%;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .nav-links {
+        display: none;
+    }
+
+
+    .hero h1 {
+        font-size: 4.2rem;
+    }
+
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+
+    .hero-image {
+        min-height: 350px;
+        height: 50vh;
+    }
+}
