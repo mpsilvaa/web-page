@@ -417,7 +417,6 @@ a {
 }
 
 
-
 /* =========================================
    ABOUT
    ========================================= */
@@ -569,6 +568,76 @@ a {
         font-size: 1.3rem !important;
     }
 }
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .navbar {
+        height: 70px;
+        padding: 0 6%;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.65rem;
+    }
+
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding: 130px 7% 80px;
+
+        gap: 4rem;
+    }
+
+
+    .hero-image {
+        height: 60vh;
+        min-height: 420px;
+    }
+
+
+    .page-section {
+        padding: 100px 7%;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .nav-links {
+        display: none;
+    }
+
+
+    .hero h1 {
+        font-size: 4.2rem;
+    }
+
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+
+    .hero-image {
+        min-height: 350px;
+        height: 50vh;
+    }
+}
+
+
+
+
+
 
 
 /* =========================================
