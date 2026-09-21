@@ -1681,3 +1681,460 @@ section {
     }
 
 }
+/* =========================================
+   CV SECTION
+   ========================================= */
+
+.cv-section {
+    padding: 110px 7% 120px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* CV heading */
+
+.cv-heading {
+    max-width: 1400px;
+
+    margin: 0 auto 3.5rem;
+}
+
+.cv-heading .section-number {
+    color: var(--magenta);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.2em;
+
+    margin-bottom: 1rem;
+}
+
+.cv-heading h2 {
+    color: var(--teal);
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+
+    margin-bottom: 1.5rem;
+}
+
+.cv-introduction {
+    max-width: 650px;
+
+    color: var(--text-muted);
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+
+/* CV container */
+
+.cv-container {
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    border: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, 0.015);
+}
+
+
+/* Top information */
+
+.cv-top {
+    padding: 2rem;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.cv-label {
+    display: block;
+
+    margin-bottom: 0.8rem;
+
+    color: var(--magenta);
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+}
+
+.cv-top h3 {
+    margin-bottom: 0.5rem;
+
+    color: var(--text);
+
+    font-size: 1.7rem;
+
+    font-weight: 500;
+}
+
+.cv-top p {
+    color: var(--text-muted);
+
+    font-size: 0.95rem;
+}
+
+
+/* CV buttons */
+
+.cv-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+}
+
+.cv-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 1rem 1.3rem;
+
+    border: 1px solid var(--teal);
+
+    color: var(--teal);
+
+    font-size: 0.7rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.cv-button:hover {
+    background: var(--teal);
+
+    color: white;
+}
+
+
+/* Download button */
+
+.cv-download {
+    border-color: var(--magenta);
+
+    color: var(--text);
+}
+
+.cv-download:hover {
+    background: var(--magenta);
+
+    color: white;
+}
+
+
+/* PDF preview */
+
+.cv-preview {
+    width: 100%;
+
+    height: 720px;
+
+    padding: 1.5rem;
+}
+
+.cv-preview iframe {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    border: none;
+
+    background: white;
+}
+
+
+/* =========================================
+   CONTACT SECTION
+   ========================================= */
+
+.contact-section {
+    padding: 110px 7% 40px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* Contact heading */
+
+.contact-heading {
+    max-width: 1400px;
+
+    margin: 0 auto 3.5rem;
+}
+
+.contact-heading .section-number {
+    color: var(--magenta);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.2em;
+
+    margin-bottom: 1rem;
+}
+
+.contact-heading h2 {
+    color: var(--teal);
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+
+    margin-bottom: 1.5rem;
+}
+
+.contact-introduction {
+    max-width: 650px;
+
+    color: var(--text-muted);
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+
+/* Contact cards */
+
+.contact-grid {
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 1.5rem;
+}
+
+.contact-card {
+    min-width: 0;
+
+    min-height: 230px;
+
+    padding: 2rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, 0.015);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--teal);
+
+    background: rgba(0, 153, 117, 0.04);
+}
+
+
+/* Top card labels */
+
+.contact-card-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: var(--text-muted);
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.16em;
+}
+
+.contact-arrow {
+    color: var(--teal);
+
+    font-size: 1.3rem;
+
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-arrow {
+    transform: translate(3px, -3px);
+
+    color: var(--magenta);
+}
+
+
+/* Contact text */
+
+.contact-card-content h3 {
+    margin-bottom: 0.5rem;
+
+    color: var(--text);
+
+    font-size: 1.8rem;
+
+    font-weight: 500;
+}
+
+.contact-card-content p {
+    color: var(--text-muted);
+
+    font-size: 0.95rem;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.website-footer {
+    max-width: 1400px;
+
+    margin: 5rem auto 0;
+
+    padding-top: 2rem;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    border-top: 1px solid var(--border);
+}
+
+.website-footer p {
+    color: var(--text-muted);
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.08em;
+}
+
+.website-footer a {
+    color: var(--teal);
+
+    font-size: 0.7rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.13em;
+}
+
+.website-footer a:hover {
+    color: var(--magenta);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media screen and (max-width: 950px) {
+
+    .cv-top {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cv-preview {
+        height: 600px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media screen and (max-width: 700px) {
+
+    .cv-section,
+    .contact-section {
+        padding: 80px 6% 40px;
+    }
+
+    .cv-top {
+        padding: 1.4rem;
+    }
+
+    .cv-actions {
+        width: 100%;
+    }
+
+    .cv-button {
+        width: 100%;
+    }
+
+    .cv-preview {
+        display: none;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        min-height: 180px;
+
+        padding: 1.5rem;
+    }
+
+    .website-footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
