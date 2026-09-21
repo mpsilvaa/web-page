@@ -1329,3 +1329,355 @@ section {
         display: none;
     }
 }
+
+/* =========================================
+   BEYOND RESEARCH
+   ========================================= */
+
+.beyond-section {
+    padding: 110px 7% 120px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================================
+   SECTION HEADING
+   ========================================= */
+
+.beyond-heading {
+    max-width: 1450px;
+
+    margin: 0 auto 3.5rem;
+}
+
+.beyond-heading .section-number {
+    margin-bottom: 1rem;
+
+    color: var(--magenta);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.2em;
+}
+
+.beyond-heading h2 {
+    margin-bottom: 1.5rem;
+
+    color: var(--teal);
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+}
+
+.beyond-introduction {
+    max-width: 650px;
+
+    color: var(--text-muted);
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   TWO COLUMN LAYOUT
+   ========================================= */
+
+.beyond-grid {
+    width: 100%;
+
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 2rem;
+
+    align-items: stretch;
+}
+
+
+/* =========================================
+   CARDS
+   ========================================= */
+
+.beyond-card {
+    min-width: 0;
+
+    padding: 2rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, 0.015);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* RECA */
+
+.reca-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(0, 153, 117, 0.55);
+}
+
+
+/* Coquette */
+
+.coquette-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(187, 0, 68, 0.55);
+}
+
+
+/* =========================================
+   TOP LABELS
+   ========================================= */
+
+.beyond-card-top {
+    min-height: 45px;
+
+    margin-bottom: 1.8rem;
+
+    padding-bottom: 1.2rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* RECA teal */
+
+.reca-card .beyond-card-top {
+    color: var(--teal);
+}
+
+
+/* Coquette magenta */
+
+.coquette-card .beyond-card-top {
+    color: var(--magenta);
+}
+
+
+.beyond-symbol {
+    font-size: 1.1rem;
+}
+
+
+/* =========================================
+   IMAGES
+   ========================================= */
+
+.beyond-image {
+    width: 100%;
+
+    height: 300px;
+
+    margin-bottom: 2rem;
+
+    overflow: hidden;
+
+    background: var(--surface-light);
+}
+
+
+.beyond-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* =========================================
+   CARD CONTENT
+   ========================================= */
+
+.beyond-content {
+    display: flex;
+
+    flex-direction: column;
+
+    flex-grow: 1;
+}
+
+
+.beyond-content h3 {
+    margin-bottom: 0.5rem;
+
+    color: var(--text);
+
+    font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.03em;
+}
+
+
+/* Subtitle */
+
+.beyond-subtitle {
+    margin-bottom: 1.8rem !important;
+
+    font-size: 0.85rem !important;
+
+    font-weight: 600;
+
+    letter-spacing: 0.02em;
+}
+
+
+.reca-card .beyond-subtitle {
+    color: var(--teal) !important;
+}
+
+
+.coquette-card .beyond-subtitle {
+    color: var(--magenta) !important;
+}
+
+
+/* Paragraphs */
+
+.beyond-content p {
+    margin-bottom: 1.4rem;
+
+    color: var(--text-muted);
+
+    font-size: 0.97rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+.beyond-links {
+    margin-top: auto;
+
+    padding-top: 1.5rem;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.beyond-link {
+    font-size: 0.72rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+
+    transition:
+        color 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* RECA links */
+
+.reca-card .beyond-link {
+    color: var(--teal);
+}
+
+
+/* Coquette links */
+
+.coquette-card .beyond-link {
+    color: var(--magenta);
+}
+
+
+.beyond-link:hover {
+    color: var(--text);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media screen and (max-width: 950px) {
+
+    .beyond-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beyond-image {
+        height: 320px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media screen and (max-width: 700px) {
+
+    .beyond-section {
+        padding: 80px 6%;
+    }
+
+    .beyond-card {
+        padding: 1.4rem;
+    }
+
+    .beyond-image {
+        height: 240px;
+    }
+
+    .beyond-heading h2 {
+        font-size: 3rem;
+    }
+
+}
