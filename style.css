@@ -1059,44 +1059,60 @@ section {
     }
 
     .custom-cursor {
-        position: fixed;
+    position: fixed;
 
-        top: 0;
-        left: 0;
+    top: 0;
+    left: 0;
 
-        width: 26px;
-        height: 26px;
+    width: 30px;
+    height: 30px;
 
-        border: 1.5px solid var(--teal);
-        border-radius: 50%;
+    border: 2.5px solid var(--teal);
+    border-radius: 50%;
 
-        pointer-events: none;
+    pointer-events: none;
 
-        z-index: 99999;
+    z-index: 99999;
 
-        transform:
-            translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
-        transition:
-            width 0.2s ease,
-            height 0.2s ease,
-            border-color 0.2s ease,
-            background 0.2s ease;
+    transition:
+        width 0.2s ease,
+        height 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        opacity 0.2s ease;
 
-        background: transparent;
+    background: rgba(0, 153, 117, 0.06);
+}
+.custom-cursor::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 4px;
+    height: 4px;
+
+    background: var(--teal);
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+}
+.custom-cursor.cursor-hover {
+    width: 50px;
+    height: 50px;
+
+    border: 3px solid var(--magenta);
+
+    background: rgba(187, 0, 68, 0.14);
+}ackground: rgba(187, 0, 68, 0.08);
     }
+.custom-cursor.cursor-hover::after {
+    background: var(--magenta);
+}
 
-
-    /* When hovering something clickable */
-
-    .custom-cursor.cursor-hover {
-        width: 46px;
-        height: 46px;
-
-        border-color: var(--magenta);
-
-        background: rgba(187, 0, 68, 0.08);
-    }
 }
 
 
